@@ -962,8 +962,6 @@ public class AndroidService implements IDriverPool, IAndroidUtils {
 
         String actualTZ = getDeviceActualTimeZone();
 
-        String tz = DeviceTimeZone.getTimezoneOffset(timeZone);
-
         if (isRequiredTimeZone(actualTZ, timeZone)) {
             LOGGER.info("Required timeZone is already set.");
             return;
