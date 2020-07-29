@@ -28,7 +28,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-import com.qaprosoft.carina.core.foundation.report.Artifacts;
+//import com.qaprosoft.carina.core.foundation.report.Artifacts;
 import com.qaprosoft.carina.core.foundation.report.ReportContext;
 import com.qaprosoft.carina.core.foundation.utils.FileManager;
 import com.qaprosoft.carina.core.foundation.webdriver.IDriverPool;
@@ -324,7 +324,7 @@ public class DriverListener implements WebDriverEventListener {
             // archive page source dump and screenshot both together
             FileManager.zipFiles(dumpArtifact, uiDumpFile, screenFile);
             
-            Artifacts.add("UI Dump artifact", new File(dumpArtifact));
+            //Artifacts.add("UI Dump artifact", new File(dumpArtifact));
         } else {
             LOGGER.debug("Dump file is empty.");
         }

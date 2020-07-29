@@ -29,7 +29,7 @@ import com.qaprosoft.carina.core.foundation.report.testrail.ITestRailManager;
 import com.qaprosoft.carina.core.foundation.report.testrail.TestRailCases;
 import com.qaprosoft.carina.core.foundation.utils.Configuration.Parameter;
 import com.qaprosoft.carina.core.foundation.utils.R;
-import com.qaprosoft.zafira.models.dto.TagType;
+//import com.qaprosoft.zafira.models.dto.TagType;
 
 /**
  * Tests for {@link ITestRailManager}
@@ -137,7 +137,7 @@ public class TestRailTest implements ITestRailManager {
 
         ITestResult result = Reporter.getCurrentTestResult();
 
-        Set<TagType> tags = new HashSet<TagType>();
+/*        Set<TagType> tags = new HashSet<TagType>();
 
         Set<String> testRailTags = getTestRailCasesUuid(result);
 
@@ -158,7 +158,7 @@ public class TestRailTest implements ITestRailManager {
             LOGGER.info(currentKey + "=" + currentValue);
         });
 
-        Assert.assertEquals(tags.size(), 3);
+        Assert.assertEquals(tags.size(), 3);*/
 
     }
 

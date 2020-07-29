@@ -31,7 +31,7 @@ import com.qaprosoft.carina.core.foundation.utils.tag.PriorityManager;
 import com.qaprosoft.carina.core.foundation.utils.tag.TagManager;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
-import com.qaprosoft.zafira.models.dto.TagType;
+//import com.qaprosoft.zafira.models.dto.TagType;
 
 /**
  * Tests for {@link TagManager}
@@ -128,7 +128,7 @@ public class TagManagerTest {
         Assert.assertTrue(tags.containsKey(TAG_NAME2));
         Assert.assertEquals(tags.get(TAG_NAME2), TAG_VALUE2);
         Assert.assertEquals(tags.size(), 2);
-        Set<TagType> tagsTypes = getTestTags(result);
+/*        Set<TagType> tagsTypes = getTestTags(result);
         Assert.assertEquals(tagsTypes.size(), 3);
         for (TagType entry : tagsTypes) {
             if (entry.getName().equals(SpecialKeywords.TEST_PRIORITY_KEY)) {
@@ -141,6 +141,7 @@ public class TagManagerTest {
             Object currentValue = entry.getValue();
             LOGGER.info(currentKey + "=" + currentValue);
         });
+*/
     }
 
     @Test
@@ -158,7 +159,7 @@ public class TagManagerTest {
         Assert.assertTrue(tags.containsKey(TAG_NAME2));
         Assert.assertEquals(tags.get(TAG_NAME2), TAG_VALUE2);
         Assert.assertEquals(tags.size(), 2);
-        Set<TagType> tagsTypes = getTestTags(result);
+/*        Set<TagType> tagsTypes = getTestTags(result);
         Assert.assertEquals(tagsTypes.size(), 2);
         for (TagType entry : tagsTypes) {
             if (entry.getName().equals(TAG_NAME2)) {
@@ -171,9 +172,10 @@ public class TagManagerTest {
             Object currentValue = entry.getValue();
             LOGGER.info(currentKey + "=" + currentValue);
         });
+*/
     }
 
-    private Set<TagType> getTestTags(ITestResult test) {
+/*    private Set<TagType> getTestTags(ITestResult test) {
         Set<TagType> tags = new HashSet();
 
         String testPriority = PriorityManager.getPriority(test);
@@ -194,5 +196,5 @@ public class TagManagerTest {
         });
         return tags;
     }
-
+*/
 }

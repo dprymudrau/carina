@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 
@@ -30,7 +31,7 @@ import com.qaprosoft.carina.core.foundation.crypto.CryptoTool;
 import com.qaprosoft.carina.core.foundation.report.TestResultItem;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.Configuration.Parameter;
-import com.qaprosoft.zafira.models.db.workitem.BaseWorkItem;
+//import com.qaprosoft.zafira.models.db.workitem.BaseWorkItem;
 
 import net.rcarz.jiraclient.BasicCredentials;
 import net.rcarz.jiraclient.JiraClient;
@@ -52,7 +53,7 @@ public class Jira {
     private static Pattern CRYPTO_PATTERN = Pattern.compile(SpecialKeywords.CRYPT);
 
     protected static ThreadLocal<List<String>> jiraTickets = new ThreadLocal<>();
-    protected static ThreadLocal<BaseWorkItem> knownIssue = new ThreadLocal<>();
+    //protected static ThreadLocal<BaseWorkItem> knownIssue = new ThreadLocal<>();
 
     static {
         try {
@@ -167,16 +168,18 @@ public class Jira {
     }
 
     public static void setKnownIssue(String jiraId, String description, boolean blocker) {
-        BaseWorkItem workItem = new BaseWorkItem(jiraId, description, blocker);
-        knownIssue.set(workItem);
+        Assert.fail("not implemented!");
+//        BaseWorkItem workItem = new BaseWorkItem(jiraId, description, blocker);
+//        knownIssue.set(workItem);
     }
 
-    public static BaseWorkItem getKnownIssue() {
+/*    public static BaseWorkItem getKnownIssue() {
         return knownIssue.get();
-    }
+    }*/
 
     private static void clearKnownIssue() {
-        knownIssue.remove();
+        Assert.fail("not implemented!");
+        // knownIssue.remove();
     }
 
     public static void clearJiraArtifacts() {

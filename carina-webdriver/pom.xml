@@ -68,11 +68,14 @@
 		</dependency>
 
 		<!-- Zafira -->
-		<dependency>
+		<!--dependency>
 			<groupId>com.qaprosoft</groupId>
 			<artifactId>zafira-client</artifactId>
-		</dependency>
-
+		</dependency-->
+<dependency>
+  <groupId>com.zebrunner</groupId>
+  <artifactId>agent-testng</artifactId>
+</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>

@@ -49,7 +49,7 @@ import com.qaprosoft.carina.core.foundation.commons.SpecialKeywords;
 import com.qaprosoft.carina.core.foundation.exception.DriverPoolException;
 import com.qaprosoft.carina.core.foundation.performance.ACTION_NAME;
 import com.qaprosoft.carina.core.foundation.performance.Timer;
-import com.qaprosoft.carina.core.foundation.report.Artifacts;
+//import com.qaprosoft.carina.core.foundation.report.Artifacts;
 import com.qaprosoft.carina.core.foundation.report.ReportContext;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.Configuration.Parameter;
@@ -352,7 +352,7 @@ public interface IDriverPool {
                 } catch (IOException e) {
                     POOL_LOGGER.warn("Error has been occured during attempt to extract " + logType + " log.", e);
                 }
-                Artifacts.add(logType, file);
+                //Artifacts.add(logType, file);
             }
             
             

@@ -88,10 +88,10 @@
 		</dependency>
 
 		<!-- Zafira -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>com.qaprosoft</groupId>
 			<artifactId>zafira-client</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

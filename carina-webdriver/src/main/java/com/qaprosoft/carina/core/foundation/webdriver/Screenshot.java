@@ -46,7 +46,6 @@ import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.Configuration.Parameter;
 import com.qaprosoft.carina.core.foundation.webdriver.augmenter.DriverAugmenter;
 import com.qaprosoft.carina.core.foundation.webdriver.screenshot.IScreenshotRule;
-import com.qaprosoft.zafira.util.upload.UploadUtil;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.windows.WindowsDriver;
@@ -248,7 +247,9 @@ public class Screenshot {
                     Configuration.getInt(Parameter.SMALL_SCREEN_HEIGHT), thumbScreenPath);
 
             // Uploading screenshot to Amazon S3
-            UploadUtil.uploadScreenshot(screenshot, screenshotThumb, comment, artifact);
+            com.zebrunner.agent.core.registrar.Screenshot.upload(screenshotBytes, capturedAtMillis);
+            
+            //UploadUtil.uploadScreenshot(screenshot, screenshotThumb, comment, artifact);
 
             // add screenshot comment to collector
             ReportContext.addScreenshotComment(screenName, comment);

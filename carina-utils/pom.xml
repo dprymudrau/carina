@@ -167,11 +167,11 @@
 		</dependency>
 
 		<!-- Zafira -->
-		<dependency>
-			<!-- Do not remove dependecy as it generates 11 compilation failures-->
+		<!--dependency>
+			Do not remove dependecy as it generates 11 compilation failures
 			<groupId>com.qaprosoft</groupId>
 			<artifactId>zafira-client</artifactId>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
